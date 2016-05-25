@@ -8,7 +8,6 @@ import paramiko
 hosts = ['192.168.7.10','192.168.50.10']
 
 # Connect to the hosts.
-
 for host in hosts:
 	print "Attempting communication with %s" % host
 	try:
@@ -28,9 +27,7 @@ for host in hosts:
 					# Print data from stdout
 					print stdout.channel.recv(1024),
 
-		#
 		# Disconnect from the host
-		#
 		print "Command done, closing SSH connection"
 		ssh.close()
 		#break
