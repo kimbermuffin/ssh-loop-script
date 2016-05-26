@@ -4,7 +4,7 @@ import sys
 import select
 import paramiko
 
-hosts = ['192.168.7.10','192.168.51.10','192.168.52.10','192.168.53.10','192.168.55.10']
+hosts = ['192.168.7.10','192.168.51.10','192.168.52.10','192.168.53.10']
 
 # Connect to the hosts.
 for host in hosts:
@@ -16,6 +16,7 @@ for host in hosts:
 		ssh.connect(host, username='admin')
 		print "Connected to %s" % host
 		stdin, stdout, stderr = ssh.exec_command("ver")
+		stdin, stdout, stderr = ssh.exec_command("cpinfo")
 
 		# Wait for the command to terminate
 		while not stdout.channel.exit_status_ready():
