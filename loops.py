@@ -4,7 +4,7 @@ import sys
 import select
 import paramiko
 
-hosts = ['192.168.7.10','192.168.50.10']
+hosts = ['192.168.7.10','192.168.51.10','192.168.52.10','192.168.53.10','192.168.54.10']
 
 # Connect to the hosts.
 for host in hosts:
