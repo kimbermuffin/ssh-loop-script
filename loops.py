@@ -16,7 +16,7 @@ for host in hosts:
 		ssh.connect(host, username='admin')
 		print "Connected to %s" % host
 		stdin, stdout, stderr = ssh.exec_command("ver")
-		stdin, stdout, stderr = ssh.exec_command("cpinfo")
+		stdin, stdout, stderr = ssh.exec_command("uptime")
 
 		# Wait for the command to terminate
 		while not stdout.channel.exit_status_ready():
