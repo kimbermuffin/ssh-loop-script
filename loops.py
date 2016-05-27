@@ -25,8 +25,7 @@ for host in hosts:
 					# Print data from stdout
 					print stdout.channel.recv(1024),
 
-		#stdin, stdout, stderr =
-		ssh.exec_command("uptime")
+		stdin, stdout, stderr = ssh.exec_command("uptime")
 
 		# Wait for the command to terminate
 		while not stdout.channel.exit_status_ready():
